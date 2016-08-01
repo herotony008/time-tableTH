@@ -1,4 +1,4 @@
-//检测ios6判断函数 begin
+﻿//检测ios6判断函数 begin
 function gtIOS6() {
     var userAgent = window.navigator.userAgent;
     var ios = userAgent.match(/(iPad|iPhone|iPod)\s+OS\s([\d_\.]+)/);

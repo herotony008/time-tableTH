@@ -1,11 +1,11 @@
-
+ï»¿
 function date(objId,dateId,num,fn){
-	//id µã»÷±êÇ©id
-	//id2 Ğ´ÈëÄêÔÂÈÕid
-	//num 2 Ñ¡ÔñÄêÔÂ¡¢3Ñ¡ÔñÄêÔÂÈÕ
-	//fn ´«ÈËº¯Êı
+	//id ç‚¹å‡»æ ‡ç­¾id
+	//id2 å†™å…¥å¹´æœˆæ—¥id
+	//num 2 é€‰æ‹©å¹´æœˆã€3é€‰æ‹©å¹´æœˆæ—¥
+	//fn ä¼ äººå‡½æ•°
 
-	/*ÈÕÆÚ¿ªÊ¼*/
+	/*æ—¥æœŸå¼€å§‹*/
 	var $obj = $(objId);
 	var $dateId = $(dateId);
 	//var $date = $('#checkDate');
@@ -16,8 +16,8 @@ function date(objId,dateId,num,fn){
 	var startYear = 2015;
 
 	var myDate = new Date();
-	var nowYear = myDate.getFullYear(); //»ñÈ¡ÍêÕûµÄÄê·İ(4Î»,1970-????)
-	var nowMonth = myDate.getMonth(); //»ñÈ¡µ±Ç°ÔÂ·İ(0-11,0´ú±í1ÔÂ)
+	var nowYear = myDate.getFullYear(); //è·å–å®Œæ•´çš„å¹´ä»½(4ä½,1970-????)
+	var nowMonth = myDate.getMonth(); //è·å–å½“å‰æœˆä»½(0-11,0ä»£è¡¨1æœˆ)
 
 
 	var data = [data1,data2,data3]
@@ -41,7 +41,7 @@ function date(objId,dateId,num,fn){
 
 	for(var i =0;i<= Math.floor(nowYear-startYear);i++){
 		data1.push({
-			text:startYear+i+'Äê',
+			text:startYear+i+'å¹´',
 			value:arr_1[1]
 		})
 	}
@@ -49,14 +49,14 @@ function date(objId,dateId,num,fn){
 	for(var i =0;i< 12;i++){
 		var s= startYear;
 		data2.push({
-			text:i+1+'ÔÂ',
+			text:i+1+'æœˆ',
 			value:arr_1[0]
 		})
 	}
 
 	for(var i =0;i< maxDay;i++){
 		data3.push({
-			text:i+1+'ÈÕ'
+			text:i+1+'æ—¥'
 		})
 	}
 
@@ -104,16 +104,16 @@ function date(objId,dateId,num,fn){
 				}
 
 				if(date > 28 && year%4==0){
-					selectIndex[2]=28  //28¼´Ê¹29ÈÕ
+					selectIndex[2]=28  //28å³ä½¿29æ—¥
 
 				}else if(date > 28 && year%4!=0){
-					selectIndex[2]=27  //28ÈÕ
+					selectIndex[2]=27  //28æ—¥
 				}
 
 			}else if(month==4 || month==6 || month==9 || month==11 && date > 30){
 				maxday=30;
 				
-				selectIndex[2]=29  //30ÈÕ
+				selectIndex[2]=29  //30æ—¥
 				
 			}
 			
@@ -129,10 +129,10 @@ function date(objId,dateId,num,fn){
 			data3 =[];
 			for(var i=0;i<maxday;i++){
 				data3.push({
-					text:i+1+'ÈÕ'
+					text:i+1+'æ—¥'
 				})
 			}
-			//ÖØÌîÈÕÆÚ
+			//é‡å¡«æ—¥æœŸ
 			$obj.picker('refill', data3, 2);
 
 			selectIndex[2]=date-1
@@ -157,12 +157,12 @@ function date(objId,dateId,num,fn){
 				data2 =[];
 				for(var i=0;i<12;i++){
 					data2.push({
-						text:i+1+'ÔÂ',
+						text:i+1+'æœˆ',
 						value:year
 					})
 				}
 				
-				//ÖØÌîÔÂ·İ
+				//é‡å¡«æœˆä»½
 				//$date.picker('refill', data2, 1);		
 
 				if(moneth==4 || moneth==6|| moneth==9|| moneth==11){
@@ -183,10 +183,10 @@ function date(objId,dateId,num,fn){
 					data3 =[];
 					for(var i=0;i<maxDay;i++){
 						data3.push({
-							text:i+1+'ÈÕ'
+							text:i+1+'æ—¥'
 						})
 					}
-					//ÖØÌîÈÕÆÚ
+					//é‡å¡«æ—¥æœŸ
 					$obj.picker('refill', data3, 2);
 				}
 
@@ -201,7 +201,7 @@ function date(objId,dateId,num,fn){
 				data1=[];
 				for(var i =0;i<= Math.floor(nowYear-startYear);i++){
 					data1.push({
-						text:startYear+i+'Äê',
+						text:startYear+i+'å¹´',
 						value:month
 					})
 				}
@@ -212,10 +212,10 @@ function date(objId,dateId,num,fn){
 						data3 = [];
 						for(var i =0;i< 31;i++){
 							data3.push({
-								text:i+1+'ÈÕ'
+								text:i+1+'æ—¥'
 							})
 						}
-						//ÖØÌîÈÕÆÚ
+						//é‡å¡«æ—¥æœŸ
 						$obj.picker('refill', data3, 2);
 					}
 					
@@ -225,10 +225,10 @@ function date(objId,dateId,num,fn){
 						data3 = [];
 						for(var i =0;i< 30;i++){
 							data3.push({
-								text:i+1+'ÈÕ'
+								text:i+1+'æ—¥'
 							})
 						}
-						//ÖØÌîÈÕÆÚ
+						//é‡å¡«æ—¥æœŸ
 						$obj.picker('refill', data3, 2);
 					}
 					
@@ -244,10 +244,10 @@ function date(objId,dateId,num,fn){
 						data3 = [];
 						for(var i =0;i< num;i++){
 							data3.push({
-								text:i+1+'ÈÕ'
+								text:i+1+'æ—¥'
 							})
 						}
-						//ÖØÌîÈÕÆÚ
+						//é‡å¡«æ—¥æœŸ
 						$obj.picker('refill', data3, 2);
 					}
 
@@ -268,10 +268,10 @@ function date(objId,dateId,num,fn){
 	});*/
 }
 
-//È¡Êı×Ö
+//å–æ•°å­—
 function getNum(text){
 	var value = text.replace(/[^0-9]/ig,""); 
 	return value
 }
 
-/*ÈÕÆÚend*/
+/*æ—¥æœŸend*/

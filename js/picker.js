@@ -1,4 +1,4 @@
-var gmu = gmu || {
+锘縱ar gmu = gmu || {
     version: "@version",
     $: window.Zepto,
     staticCall: function(t) {
@@ -155,7 +155,7 @@ function(t, e, n) {
                     !1;
                 if (u) {
                     if (!e.isFunction(a[u]))
-                        throw new Error("组件没有此方法：" + u);
+                        throw new Error("缁勪欢娌℃湁姝ゆ柟娉曪細" + u);
                     if (o = a[u].apply(a, l),
                     o !== n && o !== a)
                         return !1;
@@ -231,7 +231,7 @@ function(t, e, n) {
     function f(i, s, o) {
         function a(t, e) {
             if ("Base" === i)
-                throw new Error("Base类不能直接实例化");
+                throw new Error("Base绫讳笉鑳界洿鎺ュ疄渚嬪寲");
             return this instanceof a ? h.call(this, i, a, l++, t, e) : new a(t,e)
         }
         "function" != typeof o && (o = t.Base);
@@ -539,7 +539,7 @@ function(t) {
         compiler: [7, ">= 4.0.0"],
         main: function(t, e, n, i, r) {
             var s, o, a = null  != e ? e : {};
-            return '<div class="picker">\n  <div class="picker-mask mask-hook"></div>\n  <div class="picker-panel panel-hook">\n    <div class="picker-choose choose-hook">\n      <span class="cancel cancel-hook">取消</span>\n      <span class="confirm confirm-hook">完成</span>\n      <h1 class="picker-title">' + t.escapeExpression((o = null  != (o = n.title || (null  != e ? e.title : e)) ? o : n.helperMissing,
+            return '<div class="picker">\n  <div class="picker-mask mask-hook"></div>\n  <div class="picker-panel panel-hook">\n    <div class="picker-choose choose-hook">\n      <span class="cancel cancel-hook">鍙栨秷</span>\n      <span class="confirm confirm-hook">瀹屾垚</span>\n      <h1 class="picker-title">' + t.escapeExpression((o = null  != (o = n.title || (null  != e ? e.title : e)) ? o : n.helperMissing,
             "function" == typeof o ? o.call(a, {
                 name: "title",
                 hash: {},
